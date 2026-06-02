@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meo Flowers | Korean Floral & Crochet Boutique</title>
+    <meta name="description" content="Meo Flowers - Tiệm hoa tươi và đồ len crochet phong cách Hàn Quốc tại Huế. Chuyên cung cấp hoa sự kiện, hoa tốt nghiệp và quà tặng thiết kế riêng với thông điệp Yêu thương lan tỏa.">
+    <meta name="keywords" content="Meo Flowers, tiệm hoa Huế, hoa tươi Huế, hoa crochet, hoa len, florist Hue, hoa Hàn Quốc">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #fff5f7;
+            --text-color: #2f4f4f;
+        }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            color: var(--text-color); 
+            background-color: var(--bg-color); 
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: #2f4f4f; border-radius: 10px; }
+
+        /* Animation Classes */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .flower-card:hover .img-zoom { transform: scale(1.05); }
+        .img-zoom { transition: transform 1.2s cubic-bezier(0.2, 0, 0.2, 1); }
+
+        .nav-underline { position: relative; }
+        .nav-underline::after {
+            content: ''; position: absolute; width: 0; height: 1px;
+            bottom: -2px; left: 0; background-color: var(--text-color);
+            transition: width 0.3s ease;
+        }
+        .nav-underline:hover::after { width: 100%; }
+
+        /* Floating Contact Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(47, 79, 79, 0.2); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(47, 79, 79, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(47, 79, 79, 0); }
+        }
+        .btn-pulse { animation: pulse 2s infinite; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-[100] bg-[#fff5f7]/90 backdrop-blur-md border-b border-gray-100 px-6 py-4 md:px-12 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <img src="https://i.ibb.co/4nTZRpHz/logo.jpg" 
+                 alt="Meo Flowers Logo" class="w-10 h-10 rounded-full object-cover shadow-sm border border-gray-100">
+            <span class="text-xl font-serif font-semibold tracking-[0.2em] uppercase">Meo Flowers</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-10 text-[10px] tracking-[0.25em] uppercase font-medium">
+            <a href="#home" class="nav-underline">Home</a>
+            <a href="#booking" class="nav-underline">Menu & Price</a>
+            <a href="#events" class="nav-underline">Collections</a>
+            <a href="#contact" class="nav-underline">Contact</a>
+        </div>
+
+        <div class="md:hidden">
+            <i class="fa-solid fa-bars-staggered text-xl cursor-pointer" id="menuToggle"></i>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex flex-col justify-center items-center text-center px-6">
+        <div class="reveal">
+            <img src="https://i.ibb.co/4nTZRpHz/logo.jpg" 
+            alt="Meo Flowers Logo" class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover mx-auto mb-8 shadow-lg border-4 border-white">
+            
+            <span class="text-[11px] tracking-[0.5em] uppercase opacity-60 mb-6 block">— Seoul Inspired Florist —</span>
+            <h1 class="font-serif italic text-4xl md:text-4xl mb-8 font-light leading-tight">Meo <br> Flowersandcrochet</h1>
+            <p class="max-w-xl mx-auto text-xs md:text-sm tracking-[0.2em] leading-loose opacity-70 uppercase mb-12">
+                Hoa trao tay - Yêu thương lan tỏa.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="#booking" class="px-10 py-4 border border-[#2f4f4f] text-[10px] tracking-[0.3em] uppercase hover:bg-[#2f4f4f] hover:text-white transition-all duration-500">Xem Bảng Giá</a>
+                <a href="tel:0941190148" class="px-10 py-4 bg-[#2f4f4f] text-white text-[10px] tracking-[0.3em] uppercase hover:bg-white hover:text-[#2f4f4f] border border-[#2f4f4f] transition-all duration-500">Liên Hệ Ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-32 bg-white/30 px-6 shadow-inner">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="font-serif text-4xl italic mb-4">Gói Trọn Cảm Xúc</h2>
+                <div class="w-12 h-[1px] bg-[#2f4f4f] mx-auto mb-6 opacity-30"></div>
+                <p class="text-[10px] tracking-[0.4em] uppercase opacity-60">Chọn hoa theo tầm giá & nhu cầu của bạn</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <h3 class="text-xs tracking-[0.3em] uppercase font-semibold mb-10 pb-4 border-b border-[#2f4f4f]/10 flex justify-between items-center">
+                        <span>Ngân sách</span>
+                        <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                    </h3>
+                    <div class="space-y-5">
+                        <a href="#" class="group flex justify-between items-center p-6 bg-white/50 hover:bg-[#2f4f4f] hover:text-white transition-all duration-500" data-event="mini">
+                            <span class="font-serif italic text-xl">Mini Collection</span>
+                            <span class="text-sm tracking-widest font-light opacity-60">120.000 — 200.000</span>
+                        </a>
+                        <a href="#" class="group flex justify-between items-center p-6 bg-white/50 hover:bg-[#2f4f4f] hover:text-white transition-all duration-500" data-event="daily">
+                            <span class="font-serif italic text-xl">Daily Collection</span>
+                            <span class="text-sm tracking-widest font-light opacity-60">250.000 — 350.000</span>
+                        </a>
+                        <a href="#" class="group flex justify-between items-center p-6 bg-white/50 hover:bg-[#2f4f4f] hover:text-white transition-all duration-500" data-event="signature">
+                            <span class="font-serif italic text-xl">Signature Collection</span>
+                            <span class="text-sm tracking-widest font-light opacity-60">400.000 — 600.000</span>
+                        </a>
+                        <a href="#" class="group flex justify-between items-center p-6 bg-white/50 hover:bg-[#2f4f4f] hover:text-white transition-all duration-500" data-event="luxury">
+                            <span class="font-serif italic text-xl">Luxury Collection</span>
+                            <span class="text-sm tracking-widest font-light opacity-60">650.000 — 1.000.000</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.4s;">
+                    <h3 class="text-xs tracking-[0.3em] uppercase font-semibold mb-10 pb-4 border-b border-[#2f4f4f]/10 flex justify-between items-center">
+                        <span>Sự kiện</span>
+                        <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                    </h3>
+                    <div class="grid grid-cols-2 gap-9">
+                        <a href="#" class="border border-[#2f4f4f]/10 bg-white/30 p-6 text-center hover:border-[#2f4f4f] transition-all group" data-event="valentine">
+                            <i class="fa-solid fa-heart-pulse mb-3 opacity-30 group-hover:opacity-100 transition-opacity"></i>
+                            <p class="text-[10px] tracking-widest uppercase">Valentine (14/2)</p>
+                        </a>
+
+                        <a href="#" class="border border-[#2f4f4f]/10 bg-white/30 p-6 text-center hover:border-[#2f4f4f] transition-all group" data-event="graduation">
+                            <i class="fa-solid fa-graduation-cap mb-3 opacity-30 group-hover:opacity-100 transition-opacity"></i>
+                            <p class="text-[10px] tracking-widest uppercase">Happy Graduation</p>
+                        </a>
+
+                        <a href="#" class="border border-[#2f4f4f]/10 bg-white/30 p-6 text-center hover:border-[#2f4f4f] transition-all group" data-event="opening">
+                            <i class="fa-solid fa-store mb-3 opacity-30 group-hover:opacity-100 transition-opacity"></i>
+                            <p class="text-[10px] tracking-widest uppercase">Khai trương</p>
+                        </a>
+
+                        <a href="#" class="border border-[#2f4f4f]/10 bg-white/30 p-6 text-center hover:border-[#2f4f4f] transition-all group" data-event="wedding">
+                            <i class="fa-solid fa-champagne-glasses mb-3 opacity-30 group-hover:opacity-100 transition-opacity"></i>
+                            <p class="text-[10px] tracking-widest uppercase">Happy wedding</p>
+                        </a>
+
+                        <a href="#" class="border border-[#2f4f4f]/10 bg-white/30 p-6 text-center hover:border-[#2f4f4f] transition-all group" data-event="womensday">
+                            <i class="fa-solid fa-venus mb-3 opacity-30 group-hover:opacity-100 transition-opacity"></i>
+                            <p class="text-[10px] tracking-widest uppercase">Women's day</p>
+                        </a>
+
+                        <a href="#" class="border border-[#2f4f4f]/10 bg-white/30 p-6 text-center hover:border-[#2f4f4f] transition-all group" data-event="boysday">
+                            <i class="fa-solid fa-mars mb-3 opacity-30 group-hover:opacity-100 transition-opacity"></i>
+                            <p class="text-[10px] tracking-widest uppercase">Boy's day</p>
+                        </a>
+
+                        <a href="#" class="border border-[#2f4f4f]/10 bg-white/30 p-6 text-center hover:border-[#2f4f4f] transition-all group" data-event="trungthu">
+                            <i class="fa-solid fa-moon mb-3 opacity-30 group-hover:opacity-100 transition-opacity"></i>
+                            <p class="text-[10px] tracking-widest uppercase">Trung thu</p>
+                        </a>
+
+                        <a href="#" class="border border-[#2f4f4f]/10 bg-white/30 p-6 text-center hover:border-[#2f4f4f] transition-all group" data-event="noel">
+                            <i class="fa-solid fa-snowflake mb-3 opacity-30 group-hover:opacity-100 transition-opacity"></i>
+                            <p class="text-[10px] tracking-widest uppercase">Noel</p>
+                        </a>
+
+                        <a href="#" class="border border-[#2f4f4f]/10 bg-white/30 p-6 text-center hover:border-[#2f4f4f] transition-all group" data-event="blackwhite">
+                            <i class="fa-solid fa-palette mb-3 opacity-30 group-hover:opacity-100 transition-opacity"></i>
+                            <p class="text-[10px] tracking-widest uppercase">Black & White</p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="py-24 bg-white overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="space-y-8">
+                <div class="overflow-hidden relative group aspect-[3/4] reveal">
+                    <img src="https://i.ibb.co/GQGj5Ss0/event-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all"></div>
+                    <div class="absolute bottom-8 left-8 text-white">
+                        <h4 class="font-serif text-3xl italic mb-2">Event Decor</h4>
+                        <p class="text-[10px] tracking-[0.4em] uppercase opacity-80">Trang trí sự kiện cao cấp</p>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden relative group aspect-[3/4] reveal" style="transition-delay: 0.2s;">
+                    <img src="https://i.ibb.co/Pz5S5m9y/b-a.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                        <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Noel</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8 md:mt-16">
+                <div class="overflow-hidden relative group aspect-square reveal">
+                    <img src="https://i.ibb.co/RG8dGy0F/women-s-day.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                        <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">8/3 & 20/10</span>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden relative group aspect-[3/4] reveal" style="transition-delay: 0.2s;">
+                    <img src="https://i.ibb.co/SDxBBXcM/buffet-hoa-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all"></div>
+                    <div class="absolute bottom-8 left-8 text-white">
+                        <h4 class="font-serif text-3xl italic mb-2">Buffet Hoa</h4>
+                        <p class="text-[10px] tracking-[0.4em] uppercase opacity-80">Tự tay chọn hoa theo ý thích</p>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden relative group aspect-[3/4] reveal" style="transition-delay: 0.3s;">
+                    <img src="https://i.ibb.co/1GckWWm6/new28.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                        <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Khai Trương</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="overflow-hidden relative group aspect-[3/4] reveal">
+                    <img src="https://i.ibb.co/pvgNv4ts/graduation-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all"></div>
+                    <div class="absolute bottom-8 left-8 text-white">
+                        <h4 class="font-serif text-3xl italic mb-2">Graduation</h4>
+                        <p class="text-[10px] tracking-[0.4em] uppercase opacity-80">Bảo vệ khoá luận & Lễ tốt nghiệp</p>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden relative group aspect-square reveal" style="transition-delay: 0.2s;">
+                    <img src="https://i.ibb.co/WvzkT9Mh/new-c-t.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                        <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Valentine</span>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden relative group aspect-[4/3] reveal" style="transition-delay: 0.3s;">
+                    <img src="https://i.ibb.co/N6gVXSZ5/boy-s-day-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                        <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Boy's Day</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .img-zoom { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+    .group:hover .img-zoom { transform: scale(1.05); }
+    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+</style>
+
+    <section id="contact" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="font-serif text-5xl italic mb-12">Connect with Meo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 text-[11px] tracking-[0.2em] uppercase leading-loose opacity-80">
+                <div>
+                    <p class="font-bold mb-4">Address</p>
+                    <p>Kiệt đối diện 68 Tố Hữu, Phường Xuân Phú, TP Huế</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Contact</p>
+                    <a href="tel:0941190148" class="hover:opacity-50">0941 190 148</a>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Socials</p>
+                    <div class="flex justify-center space-x-6">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="tel:0941190148" class="px-16 py-6 bg-[#2f4f4f] text-white text-[11px] tracking-[0.4em] uppercase hover:bg-opacity-80 transition-all duration-500 shadow-xl">Gọi Tư Vấn Ngay</a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-[#2f4f4f]/10 text-center">
+        <p class="text-[9px] tracking-[0.3em] opacity-40 uppercase">© 2026 MEO FLOWERS STUDIO. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <div class="fixed bottom-8 right-8 z-[100]">
+        <a href="tel:0941190148" class="btn-pulse w-14 h-14 bg-[#2f4f4f] text-white rounded-full flex items-center justify-center text-xl shadow-2xl">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <div id="productModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center px-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="closeModalBg"></div>
+        <div class="relative bg-[#fff5f7] w-full max-w-5xl max-h-[85vh] overflow-y-auto rounded-lg shadow-2xl p-8 md:p-12">
+            <button id="closeModalBtn" class="absolute top-6 right-6 text-2xl hover:rotate-90 transition-transform duration-300">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-12">
+                <h2 id="modalTitle" class="font-serif text-3xl italic mb-2">Sản phẩm</h2>
+                <div class="w-12 h-[1px] bg-[#2f4f4f] mx-auto opacity-30"></div>
+            </div>
+            <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Data
+        const eventData = {
+
+            "valentine": [
+                { price: "2.200.000", img: "https://i.ibb.co/mVvBWF8q/queen-1.jpg " },
+                { price: "1.500.000 - 2.500.000", img: "https://i.ibb.co/vvvwWshr/4-2.jpg" },
+                { price: "1.800.000", img: "https://i.ibb.co/h1xHmLNY/V25.jpg " },
+                { price: "1.500.000", img: "https://i.ibb.co/WvzkT9Mh/new-c-t.jpg " },
+                { price: "1.000.000", img: "https://i.ibb.co/whhrwyD1/new33.jpg " },
+                { price: "700.000", img: "https://i.ibb.co/kVKG7Lzy/V1.jpg" },
+                { price: "650.000", img: "https://i.ibb.co/k71dtTx/V2.jpg" },
+                { price: "400.000 - 500.000", img: "https://i.ibb.co/kgdcPBNw/1.jpg" },
+                { price: "400.000 - 800.000", img: "https://i.ibb.co/DfBv01Pr/2-2.jpg " },
+                { price: "550.000", img: "https://i.ibb.co/cKZmhMFC/V3.jpg" },
+                { price: "400.000", img: "https://i.ibb.co/PsZXycy4/V4.jpg" },
+                { price: "450.000", img: "https://i.ibb.co/W4fYwP1y/V8.jpg" },
+                { price: "400.000", img: "https://i.ibb.co/Q7wrzVMC/V9.jpg" },
+                { price: "450.000", img: "https://i.ibb.co/CsHqgftH/V10.jpg" },
+                { price: "350.000", img: "https://i.ibb.co/YK3HKqR/V11.jpg" },
+                { price: "500.000", img: "https://i.ibb.co/gLCC2bBr/V13.jpg" },
+                { price: "350.000", img: "https://i.ibb.co/W4ZDzZ6X/V15.jpg" },
+                { price: "420.000", img: "https://i.ibb.co/sp01pj0P/V16.jpg" },
+                { price: "350.000", img: "https://i.ibb.co/Mk5Bh4bT/V17.jpg" },
+                { price: "400.000", img: "https://i.ibb.co/HDTf6rY4/V18.jpg" },
+                { price: "450.000", img: "https://i.ibb.co/RpgM81Mp/V19.jpg" },
+                { price: "400.000", img: "https://i.ibb.co/NgyS1CFk/V23.jpg" },
+                { price: "450.000", img: "https://i.ibb.co/Jjy8H1q6/V24.jpg" },
+                { price: "300.000", img: "https://i.ibb.co/3yGmj3Hb/new49.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/cKjhbgz6/3.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/hRZk82Kr/new47.jpg " },
+                { price: "450.000 - 550.000", img: "https://i.ibb.co/jsZJKCs/Sophia.jpg " },
+                { price: "450.000 - 650.000", img: "https://i.ibb.co/G46Zkj8s/Sophia-Cam-Chuong.jpg " },
+                { price: "250.000", img: " " }
+            ],
+
+            "wedding": [
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }
+            ],
+
+            "opening": [
+                { price: "800.000", img: "https://i.ibb.co/Kj8qMNFD/1.jpg" },
+                { price: "500.000", img: "https://i.ibb.co/fY7DNHQ0/2.jpg" },
+                { price: "700.000", img: "https://i.ibb.co/B57gdvg3/3.jpg " },
+                { price: "650.000", img: "https://i.ibb.co/QvJnKd4V/4.jpg " },
+                { price: "480.000", img: "https://i.ibb.co/5h8r1v6j/5.jpg " },
+                { price: "600.000", img: "https://i.ibb.co/9Hnp7vtp/6.jpg " },
+                { price: "600.000", img: "https://i.ibb.co/vx6PYX1s/7.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/35syWhDY/8.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/XxJbC4nG/9-1.jpg " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }
+            ],
+
+            "boysday": [
+                { price: "250.000", img: "https://i.ibb.co/B52kSqLT/new13.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/vxG5zHwX/new11.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/SwrHgd1c/new14.jpg " },
+                { price: "230.000", img: "https://i.ibb.co/jP3qc3Jp/new19.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/QFjynJrC/new31.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/KjcPMd8b/new32.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/spjxqY5y/new41.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/gbJ1kJt7/new44.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/Z6P961K3/new45.jpg " },
+                { price: "750.000", img: "https://i.ibb.co/xqPg1H9n/Ly-Xanh.jpg " },
+                { price: "550.000", img: "https://i.ibb.co/3mMHK1GN/Ly-Xanh2.jpg " },
+                { price: "550.000", img: "https://i.ibb.co/D37bK4D/Ly-Xanh3.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/PZjK63gd/Ly-Xanh5.jpg " },
+                { price: "380.000", img: "https://i.ibb.co/shJkkL1/H2.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/Y4jw2RWQ/Tu-Cau1.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/HfkXkZS7/Mix.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/tpXh8SHH/Mix2.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/DPCF5Wg1/Mix6.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/YTZ7PgKC/Lam-Tinh1.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/nqwZDzC0/Lam-Tinh.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/d05jbSfr/Mix7.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/CKsmphLf/Mix3.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/5XHbjGmG/Ly-Xanh4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/jkGFDjnJ/Mix4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/DPbL7MS8/Tu-Cau2.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/60xhJGC2/Tu-Cau4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/xKHtPBZX/Ly3.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/BHnNPWJX/Ly4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/m534Mnw7/Mix5.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/fYwtMn88/Mix8.jpg " },
+                { price: "230.000", img: "https://i.ibb.co/zVtxrz0Q/Mix9.jpg " },
+                { price: "210.000", img: "https://i.ibb.co/kVDfzxY6/Mix10.jpg " },
+                { price: "200.000", img: "https://i.ibb.co/DHQgJZv9/new43.jpg " },
+                { price: "200.000", img: "https://i.ibb.co/prdn2cFj/new27.jpg " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }
+            ],
+
+            "womensday": [
+                { price: "500.000", img: "https://i.ibb.co/hRZk82Kr/new47.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/PZXkqjFs/new48.jpg " },
+                { price: "430.000", img: "https://i.ibb.co/Q7x5XY65/new6.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/cKxxGtpD/new21.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/MyWWxKyC/new30.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/vx7J3spC/new1.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/Mxd3z2Xm/new2.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/VWm62L2C/new3.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/Jjhv1s6H/new4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/xSKsPs4q/new5.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/gbrPmf71/new7.jpg " },
+                { price: "230.000", img: "https://i.ibb.co/XZc4b9F4/new8.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/N6YHQd73/new12.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/sv3d9gkr/new20.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/TM98D5jF/new22.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/spC1VDF1/new29.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/FkTxmv4M/new34.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/6cf4BH2x/new35.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/TBQV41gz/new37.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/SW1jY9C/new40.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/FrR5S0X/new42.jpg " },
+                { price: "850.000", img: "https://i.ibb.co/BVWwCn5h/Ly5.jpg " },
+                { price: "650.000", img: "https://i.ibb.co/JR5BV5y6/H2.jpg " },
+                { price: "450.000 - 550.000", img: "https://i.ibb.co/jsZJKCs/Sophia.jpg " },
+                { price: "450.000 - 650.000", img: "https://i.ibb.co/G46Zkj8s/Sophia-Cam-Chuong.jpg " },
+                { price: "650.000", img: "https://i.ibb.co/KpLYJGsR/H41.jpg " },
+                { price: "650.000", img: "https://i.ibb.co/23NRwrWn/H44.jpg " },
+                { price: "650.000", img: "https://i.ibb.co/HL33ZnNy/H24.jpg " },
+                { price: "650.000", img: "https://i.ibb.co/jvcH8pxm/H52.jpg " },
+                { price: "600.000", img: "https://i.ibb.co/3y0bndmQ/Sophia2.jpg " },
+                { price: "600.000", img: "https://i.ibb.co/MDs0gYTH/Ly1.jpg " },
+                { price: "600.000", img: "https://i.ibb.co/N2GMQYBM/H30.jpg " },
+                { price: "600.000", img: "https://i.ibb.co/Fb1ZfSSd/H37.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/MyXXYzkz/HX.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/BHc4JRzQ/Cam-Chuong.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/zWFYjrkF/Cam-Chuong2.jpg " },
+                { price: "380.000", img: "https://i.ibb.co/ccbqjW8h/Ly12.jpg " },
+                { price: "380.000", img: "https://i.ibb.co/b5Xs93vz/Ly13.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/5g2rSb8d/Ly14.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/PvbhC5Nn/Ly15.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/KjVNxZm9/Ly9.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/mVcNfm0s/Cam-Chuong4.jpg " },
+                { price: "420.000", img: "https://i.ibb.co/ch1QPFvB/Ly10.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/gZFJs4wm/Ly11.jpg " },
+                { price: "480.000", img: "https://i.ibb.co/HWGzVDF/Oc-Que.jpg" },
+                { price: "400.000", img: "https://i.ibb.co/bg1bGk8C/Oc-Que2.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/fd3fycYb/H1.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/dw64qN0n/H3.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/3m079k2S/H9.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/r26SPsBT/H10.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/nMK3DygJ/H6.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/VcZWt0BN/H32.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/jSQQ9Sd/H33.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/VYYSWMJ0/H36.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/F42jh4zh/H38.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/p6Z3Lj8j/H39.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/GvC7cHhb/H40.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/rRZdxFsV/H28.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/NXmSKFZ/H29.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/x8dg2cyw/H42.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/fzZDW5Rf/H26.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/VYHW056t/H49.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/jPTnc5X9/H50.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/wrpYVCkK/H68.jpg " },
+                { price: "420.000", img: "https://i.ibb.co/Lhnz2T2T/H69.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/8qffhQK/H70.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/PsXQ4Z0s/H71.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/BRCGvYR/H64.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/gbtzMXdn/H72.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/rGMmHZJC/H73.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/LzDJcrn8/H74.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/hJQVZMpQ/H15.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/1tX2G47L/H16.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/sdKwDCcK/Ly16.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/VWG859Yt/Ly6.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/F4jGfZNT/Ly7.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/wh5smPVs/Ly8.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/PGCsptcY/Ly2.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/VWzY8SVy/Ly3.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/6JNwwntw/Ly4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/5W9cfkBF/Ly17.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/svVfQ3PD/Ly19.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/zVxzC9Gr/Ly20.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/VYHn5WKy/Ly21.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/dC5q2Hk/Cam-Chuong3.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/tTY6Q4ds/Dong-Tien.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/4RH5WHny/H4.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/cKsNDjtP/H5.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/Y74FVnS4/H7.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/27GL0b7J/H8.jpg " },
+                { price: "220.000", img: "https://i.ibb.co/Kp8F1t30/H13.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/YJtQHWj/H14.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/4RbWjR3P/H17.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/bj7z1q8w/H18.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/sJRHNkMJ/H20.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/yF6qHnN7/H22.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/DPvRHtR9/H23.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/R5xrjgZ/H25.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/4n8Vsg0q/H27.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/qM9tx9x0/H31.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/tpqhHXfv/H45.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/xqb3qjhP/H46.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/GBvygTG/H47.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/fYbrtZTk/H48.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/TM6VT1KB/250k.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/XrtTKBBW/250k-2.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/4wYHpS3G/H53.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/TM5nZMFk/H54.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/KzX5sQDb/H55.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/CKFy0jQr/H56.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/xq5cSDKd/H58.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/CKq8Tp8Z/H60.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/G3VdMwGp/h61.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/VYx7cnrF/H62.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/3YFmTWBq/H65.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/mVfdzzJd/H66.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/3YFmTWBq/H65.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/mVfdzzJd/H66.jpg " },
+                { price: "Tạm ngưng", img: "https://i.ibb.co/4nSLjstb/H63.jpg " },
+                { price: "Tạm ngưng", img: "https://i.ibb.co/WNP6F6mF/H51.jpg " },
+                { price: "Tạm ngưng", img: "https://i.ibb.co/9HkgFctW/H57.jpg " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }
+
+            ],
+
+            "graduation": [
+                { price: "500.000", img: "https://i.ibb.co/zWcwGQ2q/new36.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/hFRRwxTG/HD1.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/pvsnYb1n/HD2.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/Wv2JG0j9/new15.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/273qdKFJ/new16.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/hJcMc4Nw/new17.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/JWCztypz/new18.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/b58kkJqj/new24.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/nM1JBJRS/new25.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/qYf64YzG/new26.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/W4CnD6tD/HD3.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/HLkBS65b/HD4.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/BHd4RfBq/HD5.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/cSq5TcfJ/HD8.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/Rp2vM9rh/HD10.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/ycHgvWHy/HD14.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/ZRgWk6QS/HD17.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/7J26Ps1w/new9.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/GQFX2xkH/new10.jpg " },
+                { price: "200.000", img: "https://i.ibb.co/dwgSKhy0/HD18.jpg " },
+                { price: "380.000", img: "https://i.ibb.co/qYRLDStb/HD20.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/wNtVDJL0/HD11.jpg " },
+                { price: "180.000", img: "https://i.ibb.co/8LL7q96F/HD12.jpg " },
+                { price: "120.000", img: "https://i.ibb.co/8hLrpFR/HD13.jpg " },
+                { price: "180.000", img: "https://i.ibb.co/gLJnGsrr/HD6.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/tpfH0rPp/HD7.jpg " },
+                { price: "170.000", img: "https://i.ibb.co/g1jhctt/HD19.jpg " },
+                { price: "170.000", img: "https://i.ibb.co/fY5jzRqH/HD15.jpg " },
+                { price: "180.000", img: "https://i.ibb.co/v6hSj3Jk/HD16.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/3yNCfbg6/HD2.jpg " },
+                { price: "200.000", img: "https://i.ibb.co/ksykvhcp/HD3.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/NnshYnvV/HD1.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/nq2YMqyj/Cuc-TN.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/ZR3KQNPR/HD9.jpg " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }
+                
+            ],
+
+            "noel": [
+                { price: "300.000", img: "https://i.ibb.co/r2y0fXLh/1.jpg " },
+                { price: "200.000", img: "https://i.ibb.co/TqDFLzvm/2.jpg " },
+                { price: "200.000", img: "https://i.ibb.co/N6VLjSJ4/3.jpg " },
+                { price: "100.000", img: "https://i.ibb.co/vCfb6HM8/5.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/tw3RY8SV/6.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/cSNx6Y85/7.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/3yySkgDm/8.jpg " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }
+            ],
+
+            "trungthu": [
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }
+            ],
+
+            "blackwhite": [
+                { price: "1.500.000", img: "https://i.ibb.co/0yDTk6vR/Tu-Lip2.jpg" },
+                { price: "800.000", img: "https://i.ibb.co/6R44pgd6/Xanh-La.jpg" },
+                { price: "400.000", img: "https://i.ibb.co/F4nv4x8W/Trang3.jpg" },
+                { price: "350.000", img: "https://i.ibb.co/1tGWL70T/Trang2.jpg" },
+                { price: "300.000", img: "https://i.ibb.co/k6qfkPkn/TD.jpg" },
+                { price: "350.000", img: "https://i.ibb.co/ycZYL1QC/Ly-Trang.jpg" },
+                { price: "220.000", img: "https://i.ibb.co/jkvwrMT0/Kem4.jpg" },
+                { price: "210.000", img: "https://i.ibb.co/mCWjv6rS/Kem3.jpg" },
+                { price: "300.000", img: "https://i.ibb.co/KpcFj8ms/Kem2.jpg" },
+                { price: "320.000", img: "https://i.ibb.co/qLm5r79D/Kem.jpg" },
+                { price: "400.000", img: "https://i.ibb.co/23TttNF2/Hong-Trang2.jpg" },
+                { price: "400.000", img: "https://i.ibb.co/Zp3HWt9t/Hong-Trang.jpg" },
+                { price: "280.000", img: "https://i.ibb.co/xKVNWv5M/Baby.jpg" },
+                { price: "350.000", img: "https://i.ibb.co/N6ZJddKc/Den.jpg" },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }
+            ],
+
+            "mini": [
+                { price: "190.000", img: "https://i.ibb.co/n8LhF3MM/13.jpg" },
+                { price: "200.000", img: "https://i.ibb.co/Z6J5MpnH/H11.jpg " },
+                { price: "200.000", img: "https://i.ibb.co/DHQgJZv9/new43.jpg " },
+                { price: "200.000", img: "https://i.ibb.co/prdn2cFj/new27.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/DDCvf2wt/H12.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/5WpZkbrj/1.jpg" },
+                { price: "120.000", img: "https://i.ibb.co/GQq4jhZm/2.jpg" },
+                { price: "150.000", img: "https://i.ibb.co/LXrqw3FM/3.jpg" },
+                { price: "180.000", img: "https://i.ibb.co/kgpQfJqd/4.jpg" },
+                { price: "150.000", img: "https://i.ibb.co/vCPn43F0/5.jpg" },
+                { price: "180.000", img: "https://i.ibb.co/kgNPH0xv/7.jpg" },
+                { price: "180.000", img: "https://i.ibb.co/MDsNnz8D/8.jpg" },
+                { price: "130.000", img: "https://i.ibb.co/zTS8zHys/9.jpg" },
+                { price: "180.000", img: "https://i.ibb.co/bTktJfq/10.jpg" },
+                { price: "170.000", img: "https://i.ibb.co/2YP5Sp6k/11.jpg" },
+                { price: "120.000", img: "https://i.ibb.co/MkGbSbJB/14.jpg" },
+                { price: "180.000", img: "https://i.ibb.co/tMjhgPg7/15.jpg" },
+                { price: "130.000", img: "https://i.ibb.co/4gTSHTmW/16.jpg" },
+                { price: "150.000", img: "https://i.ibb.co/KzQncdbB/17.jpg" },
+                { price: "160.000", img: "https://i.ibb.co/Kz00gGKW/18.jpg" },
+                { price: "120.000", img: "https://i.ibb.co/wFzCsdxJ/19.jpg" },
+                { price: "150.000", img: "https://i.ibb.co/zVmNtXvs/150k.jpg " },
+                { price: "120.000", img: "https://i.ibb.co/yc24m9xb/V5.jpg" },
+                { price: "180.000", img: "https://i.ibb.co/60xTqB2f/V6.jpg" },
+                { price: "180.000", img: "https://i.ibb.co/tTyjL121/V7.jpg" },
+                { price: "180.000", img: "https://i.ibb.co/v6FDRFBP/V12.jpg" },
+                { price: "200.000", img: "https://i.ibb.co/kPb11J7/V20.jpg" },
+                { price: "150.000", img: "https://i.ibb.co/DfbXVjfX/V21.jpg" },
+                { price: "150.000", img: "https://i.ibb.co/9HYwZbYz/V22.jpg" },
+                { price: "200.000", img: "https://i.ibb.co/MkWQspYg/V14.jpg" },
+                { price: "120.000", img: "https://i.ibb.co/W42FtHYD/19.jpg" },
+                { price: "150.000", img: "https://i.ibb.co/wZV6V9Ss/H34.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/TMs3h5vq/H1.jpg " },
+                { price: "180.000", img: "https://i.ibb.co/BVVW3HPd/Mix.jpg" },
+                { price: "150.000", img: "https://i.ibb.co/4Ryc6hqw/Tu-Cau5.jpg " },
+                { price: "120.000", img: "https://i.ibb.co/j9dLHWV5/Tu-Cau3.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/F4vnJHmg/Ly2.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/KjtdxP5s/Ly.jpg " },
+                { price: "180.000", img: "https://i.ibb.co/LdghxTqd/Ly18.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/qMtjL5KQ/Ly22.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/8GNhnHH/Ly23.jpg " },
+                { price: "Tạm ngưng", img: "https://i.ibb.co/6Rg63LTc/Mini3.jpg " },
+                { price: "Tạm ngưng", img: "https://i.ibb.co/ZzwjWC7f/Mini2.jpg " },
+                { price: "Tạm ngưng", img: "https://i.ibb.co/kgWwVGtr/Mini1.jpg " },
+                { price: "Tạm ngưng", img: "https://i.ibb.co/bg3z4gq7/6.jpg" },
+                { price: "250.000", img: " " }
+            ],
+
+            "daily": [
+                { price: "250.000", img: "https://i.ibb.co/B52kSqLT/new13.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/vxG5zHwX/new11.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/SwrHgd1c/new14.jpg " },
+                { price: "230.000", img: "https://i.ibb.co/jP3qc3Jp/new19.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/QFjynJrC/new31.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/KjcPMd8b/new32.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/spjxqY5y/new41.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/gbJ1kJt7/new44.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/Z6P961K3/new45.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/vx7J3spC/new1.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/Mxd3z2Xm/new2.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/VWm62L2C/new3.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/Jjhv1s6H/new4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/xSKsPs4q/new5.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/gbrPmf71/new7.jpg " },
+                { price: "230.000", img: "https://i.ibb.co/XZc4b9F4/new8.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/N6YHQd73/new12.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/sv3d9gkr/new20.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/TM98D5jF/new22.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/spC1VDF1/new29.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/FkTxmv4M/new34.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/6cf4BH2x/new35.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/TBQV41gz/new37.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/SW1jY9C/new40.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/FrR5S0X/new42.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/sdKwDCcK/Ly16.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/VWG859Yt/Ly6.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/F4jGfZNT/Ly7.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/wh5smPVs/Ly8.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/PGCsptcY/Ly2.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/VWzY8SVy/Ly3.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/6JNwwntw/Ly4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/5W9cfkBF/Ly17.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/svVfQ3PD/Ly19.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/zVxzC9Gr/Ly20.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/VYHn5WKy/Ly21.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/dC5q2Hk/Cam-Chuong3.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/tTY6Q4ds/Dong-Tien.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/4RH5WHny/H4.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/cKsNDjtP/H5.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/Y74FVnS4/H7.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/27GL0b7J/H8.jpg " },
+                { price: "220.000", img: "https://i.ibb.co/Kp8F1t30/H13.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/YJtQHWj/H14.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/4RbWjR3P/H17.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/bj7z1q8w/H18.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/35Vp0qR3/H19.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/sJRHNkMJ/H20.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/yF6qHnN7/H22.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/DPvRHtR9/H23.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/R5xrjgZ/H25.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/4n8Vsg0q/H27.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/qM9tx9x0/H31.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/tpqhHXfv/H45.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/xqb3qjhP/H46.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/GBvygTG/H47.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/fYbrtZTk/H48.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/TM6VT1KB/250k.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/XrtTKBBW/250k-2.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/4wYHpS3G/H53.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/TM5nZMFk/H54.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/KzX5sQDb/H55.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/CKFy0jQr/H56.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/xq5cSDKd/H58.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/CKq8Tp8Z/H60.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/G3VdMwGp/h61.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/VYx7cnrF/H62.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/3YFmTWBq/H65.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/mVfdzzJd/H66.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/YTZ7PgKC/Lam-Tinh1.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/nqwZDzC0/Lam-Tinh.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/d05jbSfr/Mix7.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/CKsmphLf/Mix3.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/5XHbjGmG/Ly-Xanh4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/jkGFDjnJ/Mix4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/DPbL7MS8/Tu-Cau2.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/60xhJGC2/Tu-Cau4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/xKHtPBZX/Ly3.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/BHnNPWJX/Ly4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/m534Mnw7/Mix5.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/fYwtMn88/Mix8.jpg " },
+                { price: "230.000", img: "https://i.ibb.co/zVtxrz0Q/Mix9.jpg " },
+                { price: "210.000", img: "https://i.ibb.co/kVDfzxY6/Mix10.jpg " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }
+            ],
+
+            "signature": [
+                { price: "600.000", img: "https://i.ibb.co/3y0bndmQ/Sophia2.jpg " },
+                { price: "600.000", img: "https://i.ibb.co/MDs0gYTH/Ly1.jpg " },
+                { price: "600.000", img: "https://i.ibb.co/mV0Sm3Qz/Sophia-Cam-Chum.jpg " },
+                { price: "600.000", img: "https://i.ibb.co/N2GMQYBM/H30.jpg " },
+                { price: "600.000", img: "https://i.ibb.co/Fb1ZfSSd/H37.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/WpyNrHyk/new28.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/hRZk82Kr/new47.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/PZXkqjFs/new48.jpg " },
+                { price: "430.000", img: "https://i.ibb.co/Q7x5XY65/new6.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/cKxxGtpD/new21.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/MyWWxKyC/new30.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/MyXXYzkz/HX.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/1Ys5Cm6w/new38.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/ZpyVRyg3/new39.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/BHc4JRzQ/Cam-Chuong.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/zWFYjrkF/Cam-Chuong2.jpg " },
+                { price: "380.000", img: "https://i.ibb.co/ccbqjW8h/Ly12.jpg " },
+                { price: "380.000", img: "https://i.ibb.co/b5Xs93vz/Ly13.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/5g2rSb8d/Ly14.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/PvbhC5Nn/Ly15.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/KjVNxZm9/Ly9.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/mVcNfm0s/Cam-Chuong4.jpg " },
+                { price: "420.000", img: "https://i.ibb.co/ch1QPFvB/Ly10.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/gZFJs4wm/Ly11.jpg " },
+                { price: "480.000", img: "https://i.ibb.co/HWGzVDF/Oc-Que.jpg" },
+                { price: "400.000", img: "https://i.ibb.co/bg1bGk8C/Oc-Que2.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/fd3fycYb/H1.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/dw64qN0n/H3.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/3m079k2S/H9.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/r26SPsBT/H10.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/nMK3DygJ/H6.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/VcZWt0BN/H32.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/jSQQ9Sd/H33.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/VYYSWMJ0/H36.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/F42jh4zh/H38.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/p6Z3Lj8j/H39.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/GvC7cHhb/H40.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/rRZdxFsV/H28.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/NXmSKFZ/H29.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/x8dg2cyw/H42.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/fzZDW5Rf/H26.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/VYHW056t/H49.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/jPTnc5X9/H50.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/wrpYVCkK/H68.jpg " },
+                { price: "420.000", img: "https://i.ibb.co/Lhnz2T2T/H69.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/8qffhQK/H70.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/PsXQ4Z0s/H71.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/gbtzMXdn/H72.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/rGMmHZJC/H73.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/LzDJcrn8/H74.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/hJQVZMpQ/H15.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/1tX2G47L/H16.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/3YFmTWBq/H65.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/mVfdzzJd/H66.jpg " },
+                { price: "550.000", img: "https://i.ibb.co/3mMHK1GN/Ly-Xanh2.jpg " },
+                { price: "550.000", img: "https://i.ibb.co/D37bK4D/Ly-Xanh3.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/PZjK63gd/Ly-Xanh5.jpg " },
+                { price: "380.000", img: "https://i.ibb.co/shJkkL1/H2.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/Y4jw2RWQ/Tu-Cau1.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/HfkXkZS7/Mix.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/tpXh8SHH/Mix2.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/DPCF5Wg1/Mix6.jpg " },
+                { price: "450.000", img: "https://i.ibb.co/6RZhrYgB/Sen.jpg " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }
+            ],
+
+            "luxury": [
+                { price: "2.200.000", img: "https://i.ibb.co/mVvBWF8q/queen-1.jpg " },
+                { price: "1.500.000 - 2.500.000", img: "https://i.ibb.co/vvvwWshr/4-2.jpg" },
+                { price: "1.500.000", img: "https://i.ibb.co/WvzkT9Mh/new-c-t.jpg " },
+                { price: "1.800.000", img: "https://i.ibb.co/h1xHmLNY/V25.jpg " },
+                { price: "1.500.000", img: "https://i.ibb.co/0yDTk6vR/Tu-Lip2.jpg" },
+                { price: "1.000.000", img: "https://i.ibb.co/whhrwyD1/new33.jpg " },
+                { price: "850.000", img: "https://i.ibb.co/BVWwCn5h/Ly5.jpg " },
+                { price: "650.000", img: "https://i.ibb.co/JR5BV5y6/H2.jpg " },
+                { price: "450.000 - 550.000", img: "https://i.ibb.co/jsZJKCs/Sophia.jpg " },
+                { price: "450.000 - 650.000", img: "https://i.ibb.co/G46Zkj8s/Sophia-Cam-Chuong.jpg " },
+                { price: "650.000", img: "https://i.ibb.co/KpLYJGsR/H41.jpg " },
+                { price: "650.000", img: "https://i.ibb.co/23NRwrWn/H44.jpg " },
+                { price: "650.000", img: "https://i.ibb.co/HL33ZnNy/H24.jpg " },
+                { price: "650.000", img: "https://i.ibb.co/jvcH8pxm/H52.jpg " },
+                { price: "800.000", img: "https://i.ibb.co/6R44pgd6/Xanh-La.jpg" },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }
+            ],
+
+            "default": [
+                { name: "Hoa Thiết Kế Riêng", price: "Liên hệ", img: "https://picsum.photos/400/500?random=10" }
+            ]
+        };
+
+        // 2. Các phần tử DOM
+        const modal = document.getElementById('productModal');
+        const productGrid = document.getElementById('productGrid');
+        const modalTitle = document.getElementById('modalTitle');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const closeModalBg = document.getElementById('closeModalBg');
+
+        // 3. Hàm hiển thị Modal (Đã sửa lỗi logic)
+        function openModal(key, title) {
+            const products = eventData[key] || eventData["default"];
+            modalTitle.innerText = title;
+            productGrid.innerHTML = '';
+
+            products.forEach((item, index) => {
+                const card = `
+                    <div class="flower-card group bg-white p-4 shadow-sm border border-gray-100">
+                        <div class="overflow-hidden mb-4 h-72 bg-gray-100">
+                            <img src="${item.img}" class="img-zoom w-full h-full object-cover" alt="Product">
+                        </div>
+                        <div class="flex justify-between items-end mb-4">
+                            <div>
+                                <p class="text-[9px] tracking-widest uppercase opacity-60">Giá từ</p>
+                                <p class="font-serif italic text-lg text-[#2f4f4f]">${item.price} VND</p>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>`;
+                productGrid.innerHTML += card;
+            });
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 4. Các hàm hỗ trợ
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function toggleOrderForm(index) {
+            const form = document.getElementById(`form-${index}`);
+            form.classList.toggle('hidden');
+        }
+
+
+        // 5. Gắn sự kiện Click cho các danh mục (Quan trọng)
+        document.querySelectorAll('[data-event]').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const key = button.getAttribute('data-event');
+                const title = button.innerText.split('\n')[0]; // Lấy tên hiển thị
+                openModal(key, title);
+            });
+        });
+
+        closeModalBtn.addEventListener('click', closeModal);
+        closeModalBg.addEventListener('click', closeModal);
+
+        // 6. Hiệu ứng cuộn (Scroll Reveal)
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            reveals.forEach(el => {
+                var windowHeight = window.innerHeight;
+                var elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) {
+                    el.classList.add("active");
+                }
+            });
+        }
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+
+        // Thêm vào phần JavaScript của bạn
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.querySelector('.md\\:flex'); // Chọn khối chứa link điều hướng
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+            navLinks.classList.toggle('flex-col');
+            navLinks.classList.toggle('absolute');
+            navLinks.classList.toggle('top-16');
+            navLinks.classList.toggle('left-0');
+            navLinks.classList.toggle('w-full');
+            navLinks.classList.toggle('bg-white');
+            navLinks.classList.toggle('p-6');
+        });
+    </script>
+</body>
+</html>
