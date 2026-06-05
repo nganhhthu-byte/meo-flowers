@@ -54,11 +54,15 @@
 </head>
 <body class="overflow-x-hidden">
 
-    <nav class="fixed top-0 w-full z-[100] bg-[#fff5f7]/90 backdrop-blur-md border-b border-gray-100 px-6 py-4 md:px-12 flex justify-between items-center">
-        <div class="flex items-center gap-4">
-            <img src="https://i.ibb.co/4nTZRpHz/logo.jpg" 
-                 alt="Meo Flowers Logo" class="w-10 h-10 rounded-full object-cover shadow-sm border border-gray-100">
-            <span class="text-xl font-serif font-semibold tracking-[0.2em] uppercase">Meo Flowers</span>
+    <nav class="fixed top-0 w-full z-[100] bg-[#fff5f7]/90 backdrop-blur-md border-b border-gray-100 px-6 py-3 md:px-12 flex justify-between items-center h-20">
+        <div class="flex items-center gap-4 h-full">
+            <!-- Sử dụng h-24 để logo lớn hẳn lên, và absolute/top-2 để cố định vị trí, không bị cắt bởi rìa thanh nav -->
+            <div class="relative w-24 h-24 flex items-center justify-center">
+                <img src="https://i.ibb.co/4nTZRpHz/logo.jpg"
+                     alt="Meo Flowers Logo"
+                     class="absolute top-1 w-20 h-20 rounded-full object-contain shadow-md border border-gray-100 bg-white">
+            </div>
+            <span class="text-xl font-serif font-semibold tracking-[0.2em] uppercase ml-2">Meo Flowers</span>
         </div>
         
         <div class="hidden md:flex space-x-10 text-[10px] tracking-[0.25em] uppercase font-medium">
@@ -416,7 +420,7 @@
                 { price: "210.000", img: "https://i.ibb.co/kVDfzxY6/Mix10.jpg " },
                 { price: "200.000", img: "https://i.ibb.co/DHQgJZv9/new43.jpg " },
                 { price: "200.000", img: "https://i.ibb.co/prdn2cFj/new27.jpg " },
-                { price: "250.000", img: " " },
+                { price: "250.000", img: "https://i.ibb.co/kgQTFf14/mehecafe.jpg " },
                 { price: "250.000", img: " " },
                 { price: "250.000", img: " " }
             ],
@@ -680,6 +684,7 @@
             ],
 
             "daily": [
+                { price: "250.000", img: "https://i.ibb.co/kgQTFf14/mehecafe.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/B52kSqLT/new13.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/vxG5zHwX/new11.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/SwrHgd1c/new14.jpg " },
@@ -763,7 +768,6 @@
                 { price: "250.000", img: "https://i.ibb.co/fYwtMn88/Mix8.jpg " },
                 { price: "230.000", img: "https://i.ibb.co/zVtxrz0Q/Mix9.jpg " },
                 { price: "210.000", img: "https://i.ibb.co/kVDfzxY6/Mix10.jpg " },
-                { price: "250.000", img: " " },
                 { price: "250.000", img: " " },
                 { price: "250.000", img: " " }
             ],
