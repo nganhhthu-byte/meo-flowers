@@ -86,6 +86,8 @@
             <div class="flex flex-col md:flex-row gap-6 justify-center">
                 <a href="#booking" class="px-10 py-4 border border-[#2f4f4f] text-[10px] tracking-[0.3em] uppercase hover:bg-[#2f4f4f] hover:text-white transition-all duration-500">Xem Bảng Giá</a>
                 <a href="https://www.facebook.com/profile.php?id=61554602545957" class="px-10 py-4 bg-[#2f4f4f] text-white text-[10px] tracking-[0.3em] uppercase hover:bg-white hover:text-[#2f4f4f] border border-[#2f4f4f] transition-all duration-500">Fan Page</a>
+                <a href="https://www.instagram.com/meo_flowersandcrochet?igsh=eDhqZzh4MDN2bHFm" class="px-10 py-4 bg-[#2f4f4f] text-white text-[10px] tracking-[0.3em] uppercase hover:bg-white hover:text-[#2f4f4f] border border-[#2f4f4f] transition-all duration-500">Instagram</a>
+                <a href="https://www.tiktok.com/@meo_flowersandcrochet" class="px-10 py-4 bg-[#2f4f4f] text-white text-[10px] tracking-[0.3em] uppercase hover:bg-white hover:text-[#2f4f4f] border border-[#2f4f4f] transition-all duration-500">Tik Tok</a>
             </div>
         </div>
     </section>
@@ -427,8 +429,8 @@
                 { price: "450.000", img: "https://i.ibb.co/MyWWxKyC/new30.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/vx7J3spC/new1.jpg " },
                 { price: "300.000", img: "https://i.ibb.co/Mxd3z2Xm/new2.jpg " },
-                { price: "300.000", img: "https://i.ibb.co/VWm62L2C/new3.jpg " },
-                { price: "300.000", img: "https://i.ibb.co/Jjhv1s6H/new4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/VWm62L2C/new3.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/Jjhv1s6H/new4.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/xSKsPs4q/new5.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/gbrPmf71/new7.jpg " },
                 { price: "230.000", img: "https://i.ibb.co/XZc4b9F4/new8.jpg " },
@@ -506,7 +508,7 @@
                 { price: "350.000", img: "https://i.ibb.co/VYHn5WKy/Ly21.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/dC5q2Hk/Cam-Chuong3.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/tTY6Q4ds/Dong-Tien.jpg " },
-                { price: "300.000", img: "https://i.ibb.co/4RH5WHny/H4.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/4RH5WHny/H4.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/cKsNDjtP/H5.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/Y74FVnS4/H7.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/27GL0b7J/H8.jpg " },
@@ -689,8 +691,8 @@
                 { price: "350.000", img: "https://i.ibb.co/Z6P961K3/new45.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/vx7J3spC/new1.jpg " },
                 { price: "300.000", img: "https://i.ibb.co/Mxd3z2Xm/new2.jpg " },
-                { price: "300.000", img: "https://i.ibb.co/VWm62L2C/new3.jpg " },
-                { price: "300.000", img: "https://i.ibb.co/Jjhv1s6H/new4.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/VWm62L2C/new3.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/Jjhv1s6H/new4.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/xSKsPs4q/new5.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/gbrPmf71/new7.jpg " },
                 { price: "230.000", img: "https://i.ibb.co/XZc4b9F4/new8.jpg " },
@@ -716,7 +718,7 @@
                 { price: "350.000", img: "https://i.ibb.co/VYHn5WKy/Ly21.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/dC5q2Hk/Cam-Chuong3.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/tTY6Q4ds/Dong-Tien.jpg " },
-                { price: "300.000", img: "https://i.ibb.co/4RH5WHny/H4.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/4RH5WHny/H4.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/cKsNDjtP/H5.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/Y74FVnS4/H7.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/27GL0b7J/H8.jpg " },
