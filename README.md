@@ -888,7 +888,7 @@
                         </div>
                         <div class="flex justify-between items-end mb-4">
                             <div>
-                                <p class="text-[9px] tracking-widest uppercase opacity-60">Giá từ</p>
+                                <p class="text-[9px] tracking-widest uppercase opacity-60"> Price</p>
                                 <p class="font-serif italic text-lg text-[#2f4f4f]">${item.price} VND</p>
                             </div>
                             
