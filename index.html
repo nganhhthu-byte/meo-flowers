@@ -420,7 +420,7 @@
                 { price: "210.000", img: "https://i.ibb.co/kVDfzxY6/Mix10.jpg " },
                 { price: "200.000", img: "https://i.ibb.co/DHQgJZv9/new43.jpg " },
                 { price: "200.000", img: "https://i.ibb.co/prdn2cFj/new27.jpg " },
-                { price: "250.000", img: "https://i.ibb.co/kgQTFf14/mehecafe.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/kgQTFf14/mehecafe.jpg " },
                 { price: "300.000", img: "https://i.ibb.co/cGj3kLs/ocquesaoxanh.jpg " },
                 { price: "250.000", img: " " },
                 { price: "250.000", img: " " }
@@ -688,7 +688,7 @@
             ],
 
             "daily": [
-                { price: "250.000", img: "https://i.ibb.co/kgQTFf14/mehecafe.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/kgQTFf14/mehecafe.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/B52kSqLT/new13.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/vxG5zHwX/new11.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/SwrHgd1c/new14.jpg " },
