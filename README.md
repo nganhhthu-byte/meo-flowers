@@ -421,6 +421,7 @@
                 { price: "200.000", img: "https://i.ibb.co/DHQgJZv9/new43.jpg " },
                 { price: "200.000", img: "https://i.ibb.co/prdn2cFj/new27.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/kgQTFf14/mehecafe.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/cGj3kLs/ocquesaoxanh.jpg " },
                 { price: "250.000", img: " " },
                 { price: "250.000", img: " " }
             ],
@@ -433,6 +434,7 @@
                 { price: "450.000", img: "https://i.ibb.co/MyWWxKyC/new30.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/vx7J3spC/new1.jpg " },
                 { price: "300.000", img: "https://i.ibb.co/Mxd3z2Xm/new2.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/pB7Gkyhw/ocquely.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/VWm62L2C/new3.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/Jjhv1s6H/new4.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/xSKsPs4q/new5.jpg " },
@@ -445,8 +447,8 @@
                 { price: "350.000", img: "https://i.ibb.co/FkTxmv4M/new34.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/6cf4BH2x/new35.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/TBQV41gz/new37.jpg " },
-                { price: "250.000", img: "https://i.ibb.co/SW1jY9C/new40.jpg " },
-                { price: "250.000", img: "https://i.ibb.co/FrR5S0X/new42.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/SW1jY9C/new40.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/FrR5S0X/new42.jpg " },
                 { price: "850.000", img: "https://i.ibb.co/BVWwCn5h/Ly5.jpg " },
                 { price: "650.000", img: "https://i.ibb.co/JR5BV5y6/H2.jpg " },
                 { price: "450.000 - 550.000", img: "https://i.ibb.co/jsZJKCs/Sophia.jpg " },
@@ -548,7 +550,6 @@
                 { price: "Tạm ngưng", img: "https://i.ibb.co/WNP6F6mF/H51.jpg " },
                 { price: "Tạm ngưng", img: "https://i.ibb.co/9HkgFctW/H57.jpg " },
                 { price: "250.000", img: " " },
-                { price: "250.000", img: " " },
                 { price: "250.000", img: " " }
 
             ],
@@ -589,7 +590,7 @@
                 { price: "150.000", img: "https://i.ibb.co/NnshYnvV/HD1.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/nq2YMqyj/Cuc-TN.jpg " },
                 { price: "150.000", img: "https://i.ibb.co/ZR3KQNPR/HD9.jpg " },
-                { price: "250.000", img: " " },
+                { price: "180.000", img: "https://i.ibb.co/r2ftb4bp/tnhong.jpg " },
                 { price: "250.000", img: " " }
                 
             ],
@@ -676,11 +677,14 @@
                 { price: "180.000", img: "https://i.ibb.co/LdghxTqd/Ly18.jpg " },
                 { price: "150.000", img: "https://i.ibb.co/qMtjL5KQ/Ly22.jpg " },
                 { price: "150.000", img: "https://i.ibb.co/8GNhnHH/Ly23.jpg " },
+                { price: "180.000", img: "https://i.ibb.co/dsjDfSw1/xanh.jpg " },
+                { price: "190.000", img: "https://i.ibb.co/B5MHSbNW/lygiaybao.jpg " },
+                { price: "150.000", img: "https://i.ibb.co/84mKmNyK/tucauhongtrang-2.jpg " },
                 { price: "Tạm ngưng", img: "https://i.ibb.co/6Rg63LTc/Mini3.jpg " },
                 { price: "Tạm ngưng", img: "https://i.ibb.co/ZzwjWC7f/Mini2.jpg " },
                 { price: "Tạm ngưng", img: "https://i.ibb.co/kgWwVGtr/Mini1.jpg " },
                 { price: "Tạm ngưng", img: "https://i.ibb.co/bg3z4gq7/6.jpg" },
-                { price: "250.000", img: " " }
+                { price: "250.000", img: " " },
             ],
 
             "daily": [
@@ -706,10 +710,12 @@
                 { price: "350.000", img: "https://i.ibb.co/TM98D5jF/new22.jpg " },
                 { price: "300.000", img: "https://i.ibb.co/spC1VDF1/new29.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/FkTxmv4M/new34.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/3Dnd4zP/ocquesaoxanh.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/67MVqBXw/ocquely.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/6cf4BH2x/new35.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/TBQV41gz/new37.jpg " },
-                { price: "250.000", img: "https://i.ibb.co/SW1jY9C/new40.jpg " },
-                { price: "250.000", img: "https://i.ibb.co/FrR5S0X/new42.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/SW1jY9C/new40.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/FrR5S0X/new42.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/sdKwDCcK/Ly16.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/VWG859Yt/Ly6.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/F4jGfZNT/Ly7.jpg " },
