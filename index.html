@@ -136,6 +136,11 @@
                         <i class="fa-solid fa-chevron-right text-[8px]"></i>
                     </h3>
                     <div class="grid grid-cols-2 gap-9">
+                        <a href="#" class="border border-[#2f4f4f]/10 bg-white/30 p-6 text-center hover:border-[#2f4f4f] transition-all group" data-event="hoagia">
+                            <i class="fa-solid fa-seedling mb-3 opacity-30 group-hover:opacity-100 transition-opacity"></i>
+                            <p class="text-[10px] tracking-widest uppercase">Hoa Giả</p>
+                        </a>
+
                         <a href="#" class="border border-[#2f4f4f]/10 bg-white/30 p-6 text-center hover:border-[#2f4f4f] transition-all group" data-event="valentine">
                             <i class="fa-solid fa-heart-pulse mb-3 opacity-30 group-hover:opacity-100 transition-opacity"></i>
                             <p class="text-[10px] tracking-widest uppercase">Valentine (14/2)</p>
@@ -324,6 +329,84 @@
         // 1. Data
         const eventData = {
 
+            "hoagia":[
+                { price: "1.500.000", img: "https://i.ibb.co/VcDcN7fX/cc5.jpg " },
+                { price: "1.500.000", img: "https://i.ibb.co/GQkrbt87/cc6.jpg " },
+                { price: "1.500.000", img: "https://i.ibb.co/tP1xHCfx/cc7.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/1YDWLWwD/cc4.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/4gsQp0fb/cc3.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/Cp7f7mmb/cc2.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/1ftBX4ND/cc1.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/84BxryCj/gia1.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/1fnpNHvT/gia2.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/pjqgp69W/gia3.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/qMHr7z4s/gia4.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/bR2YNf0t/gia5.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/zWYnz1Yz/gia6.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/9k2phfWr/gia7.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/svs8SbrS/gia8.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/whCqpBRx/gia9.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/VY0BCg20/gia10.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/dJH226dx/gia11.jpg" },
+                { price: "300.000", img: "https://i.ibb.co/60pH3gwJ/gia12.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/mCcsqLx5/gia19.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/d0ndVB3w/gia22.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/k2Q42sMj/h1.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/zWvSGQv9/h2.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/Kj270g2K/h3.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/XxyckhQJ/h4.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/TqWXsrr7/h5.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/27955dLg/gia13.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/mrF5xg32/gia14.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/N617FbCk/gia15.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/gZW5cpgv/gia16.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/F49Lzr6g/gia17.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/k2P77TX0/gia18.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/9kWYLyLc/gia21.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/DDkTmP3j/gia20.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/C5WjbJnt/xanh1.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/hFFmcfhw/x1.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/C5WjbJnt/xanh1.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/hFFmcfhw/x1.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/Q7rYGVY1/d1.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/Tq13FVJm/d2.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/Ngy1TQdJ/d3.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/spszGRBJ/d5.jpg " },
+                { price: "300.000", img: "https://i.ibb.co/KcZBKMLW/d4.jpg " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "300.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " },
+                { price: "250.000", img: " " }   
+            ],
+
             "valentine": [
                 { price: "2.200.000", img: "https://i.ibb.co/mVvBWF8q/queen-1.jpg " },
                 { price: "1.500.000 - 2.500.000", img: "https://i.ibb.co/vvvwWshr/4-2.jpg" },
@@ -420,7 +503,7 @@
                 { price: "210.000", img: "https://i.ibb.co/kVDfzxY6/Mix10.jpg " },
                 { price: "200.000", img: "https://i.ibb.co/DHQgJZv9/new43.jpg " },
                 { price: "200.000", img: "https://i.ibb.co/prdn2cFj/new27.jpg " },
-                { price: "300.000", img: "https://i.ibb.co/kgQTFf14/mehecafe.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/kgQTFf14/mehecafe.jpg " },
                 { price: "300.000", img: "https://i.ibb.co/cGj3kLs/ocquesaoxanh.jpg " },
                 { price: "250.000", img: " " },
                 { price: "250.000", img: " " }
@@ -688,7 +771,7 @@
             ],
 
             "daily": [
-                { price: "300.000", img: "https://i.ibb.co/kgQTFf14/mehecafe.jpg " },
+                { price: "250.000", img: "https://i.ibb.co/kgQTFf14/mehecafe.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/B52kSqLT/new13.jpg " },
                 { price: "250.000", img: "https://i.ibb.co/vxG5zHwX/new11.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/SwrHgd1c/new14.jpg " },
