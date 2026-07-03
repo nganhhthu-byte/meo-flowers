@@ -721,7 +721,7 @@
 
             "mini": [
                 { price: "190.000", img: "https://i.ibb.co/n8LhF3MM/13.jpg" },
-                { price: "200.000", img: "https://i.ibb.co/Z6J5MpnH/H11.jpg " },
+                { price: "SOLD OUT", img: "https://i.ibb.co/Z6J5MpnH/H11.jpg " },
                 { price: "200.000", img: "https://i.ibb.co/DHQgJZv9/new43.jpg " },
                 { price: "200.000", img: "https://i.ibb.co/prdn2cFj/new27.jpg " },
                 { price: "150.000", img: "https://i.ibb.co/DDCvf2wt/H12.jpg " },
