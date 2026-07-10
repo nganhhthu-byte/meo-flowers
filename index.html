@@ -783,7 +783,7 @@
                 { price: "350.000", img: "https://i.ibb.co/gbJ1kJt7/new44.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/Z6P961K3/new45.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/vx7J3spC/new1.jpg " },
-                { price: "300.000", img: "https://i.ibb.co/Mxd3z2Xm/new2.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/Mxd3z2Xm/new2.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/VWm62L2C/new3.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/Jjhv1s6H/new4.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/xSKsPs4q/new5.jpg " },
