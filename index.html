@@ -50,6 +50,95 @@
             100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(47, 79, 79, 0); }
         }
         .btn-pulse { animation: pulse 2s infinite; }
+
+        /* ================= EVENT DECOR ================= */
+
+        .event-card {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: .35s;
+            box-shadow: 0 10px 25px rgba(0,0,0,.08);
+        }
+
+            .event-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0,0,0,.15);
+            }
+
+            .event-card img {
+                width: 100%;
+                height: 280px;
+                object-fit: cover;
+                transition: .5s;
+            }
+
+            .event-card:hover img {
+                transform: scale(1.08);
+            }
+
+        .event-name {
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* ================= GALLERY ================= */
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 18px;
+            cursor: pointer;
+        }
+
+            .gallery-item img {
+                width: 100%;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                transition: .45s;
+            }
+
+            .gallery-item:hover img {
+                transform: scale(1.08);
+            }
+
+        /* ================= IMAGE VIEW ================= */
+
+        #imageViewer {
+            animation: fadeIn .3s;
+        }
+
+        #viewerImg {
+            animation: zoomIn .3s;
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+
+            from {
+                transform: scale(.7);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -64,7 +153,7 @@
             </div>
             <span class="text-xl font-serif font-semibold tracking-[0.2em] uppercase ml-2">Meo Flowers</span>
         </div>
-        
+
         <div class="hidden md:flex space-x-10 text-[10px] tracking-[0.25em] uppercase font-medium">
             <a href="#home" class="nav-underline">Home</a>
             <a href="#booking" class="nav-underline">Menu & Price</a>
@@ -79,9 +168,9 @@
 
     <section id="home" class="relative h-screen flex flex-col justify-center items-center text-center px-6">
         <div class="reveal">
-            <img src="https://i.ibb.co/4nTZRpHz/logo.jpg" 
-            alt="Meo Flowers Logo" class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover mx-auto mb-8 shadow-lg border-4 border-white">
-            
+            <img src="https://i.ibb.co/4nTZRpHz/logo.jpg"
+                 alt="Meo Flowers Logo" class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover mx-auto mb-8 shadow-lg border-4 border-white">
+
             <span class="text-[11px] tracking-[0.5em] uppercase opacity-60 mb-6 block">— Seoul Inspired Florist —</span>
             <h1 class="font-serif italic text-4xl md:text-4xl mb-8 font-light leading-tight">Meo <br> Flowersandcrochet</h1>
             <p class="max-w-xl mx-auto text-xs md:text-sm tracking-[0.2em] leading-loose opacity-70 uppercase mb-12">
@@ -193,87 +282,173 @@
     </section>
 
     <section id="events" class="py-24 bg-white overflow-hidden">
-    <div class="max-w-[1400px] mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div class="space-y-8">
-                <div class="overflow-hidden relative group aspect-[3/4] reveal">
-                    <img src="https://i.ibb.co/GQGj5Ss0/event-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all"></div>
-                    <div class="absolute bottom-8 left-8 text-white">
-                        <h4 class="font-serif text-3xl italic mb-2">Event Decor</h4>
-                        <p class="text-[10px] tracking-[0.4em] uppercase opacity-80">Trang trí sự kiện cao cấp</p>
+        <div class="max-w-[1400px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="space-y-8">
+                    <div class="overflow-hidden relative group aspect-[3/4] reveal">
+                        <img src="https://i.ibb.co/GQGj5Ss0/event-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all"></div>
+                        <div class="absolute bottom-8 left-8 text-white">
+                            <h4 class="font-serif text-3xl italic mb-2">Event Decor</h4>
+                            <p class="text-[10px] tracking-[0.4em] uppercase opacity-80">Trang trí sự kiện cao cấp</p>
+                        </div>
+                    </div>
+
+                    <div class="overflow-hidden relative group aspect-[3/4] reveal" style="transition-delay: 0.2s;">
+                        <img src="https://i.ibb.co/Pz5S5m9y/b-a.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                            <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Noel</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="overflow-hidden relative group aspect-[3/4] reveal" style="transition-delay: 0.2s;">
-                    <img src="https://i.ibb.co/Pz5S5m9y/b-a.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
-                        <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Noel</span>
+                <div class="space-y-8 md:mt-16">
+                    <div class="overflow-hidden relative group aspect-square reveal">
+                        <img src="https://i.ibb.co/RG8dGy0F/women-s-day.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                            <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">8/3 & 20/10</span>
+                        </div>
+                    </div>
+
+                    <div class="overflow-hidden relative group aspect-[3/4] reveal" style="transition-delay: 0.2s;">
+                        <img src="https://i.ibb.co/SDxBBXcM/buffet-hoa-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all"></div>
+                        <div class="absolute bottom-8 left-8 text-white">
+                            <h4 class="font-serif text-3xl italic mb-2">Buffet Hoa</h4>
+                            <p class="text-[10px] tracking-[0.4em] uppercase opacity-80">Tự tay chọn hoa theo ý thích</p>
+                        </div>
+                    </div>
+
+                    <div class="overflow-hidden relative group aspect-[3/4] reveal" style="transition-delay: 0.3s;">
+                        <img src="https://i.ibb.co/1GckWWm6/new28.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                            <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Khai Trương</span>
+                        </div>
                     </div>
                 </div>
+
+                <div class="space-y-8">
+                    <div class="overflow-hidden relative group aspect-[3/4] reveal">
+                        <img src="https://i.ibb.co/pvgNv4ts/graduation-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all"></div>
+                        <div class="absolute bottom-8 left-8 text-white">
+                            <h4 class="font-serif text-3xl italic mb-2">Graduation</h4>
+                            <p class="text-[10px] tracking-[0.4em] uppercase opacity-80">Bảo vệ khoá luận & Lễ tốt nghiệp</p>
+                        </div>
+                    </div>
+
+                    <div class="overflow-hidden relative group aspect-square reveal" style="transition-delay: 0.2s;">
+                        <img src="https://i.ibb.co/WvzkT9Mh/new-c-t.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                            <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Valentine</span>
+                        </div>
+                    </div>
+
+                    <div class="overflow-hidden relative group aspect-[4/3] reveal" style="transition-delay: 0.3s;">
+                        <img src="https://i.ibb.co/N6gVXSZ5/boy-s-day-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                            <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Boy's Day</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <div class="space-y-8 md:mt-16">
-                <div class="overflow-hidden relative group aspect-square reveal">
-                    <img src="https://i.ibb.co/RG8dGy0F/women-s-day.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
-                        <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">8/3 & 20/10</span>
-                    </div>
-                </div>
+    <style>
+        .img-zoom {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-                <div class="overflow-hidden relative group aspect-[3/4] reveal" style="transition-delay: 0.2s;">
-                    <img src="https://i.ibb.co/SDxBBXcM/buffet-hoa-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all"></div>
-                    <div class="absolute bottom-8 left-8 text-white">
-                        <h4 class="font-serif text-3xl italic mb-2">Buffet Hoa</h4>
-                        <p class="text-[10px] tracking-[0.4em] uppercase opacity-80">Tự tay chọn hoa theo ý thích</p>
-                    </div>
-                </div>
+        .group:hover .img-zoom {
+            transform: scale(1.05);
+        }
 
-                <div class="overflow-hidden relative group aspect-[3/4] reveal" style="transition-delay: 0.3s;">
-                    <img src="https://i.ibb.co/1GckWWm6/new28.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
-                        <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Khai Trương</span>
-                    </div>
-                </div>
-            </div>
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
 
-            <div class="space-y-8">
-                <div class="overflow-hidden relative group aspect-[3/4] reveal">
-                    <img src="https://i.ibb.co/pvgNv4ts/graduation-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all"></div>
-                    <div class="absolute bottom-8 left-8 text-white">
-                        <h4 class="font-serif text-3xl italic mb-2">Graduation</h4>
-                        <p class="text-[10px] tracking-[0.4em] uppercase opacity-80">Bảo vệ khoá luận & Lễ tốt nghiệp</p>
-                    </div>
-                </div>
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    </style>
 
-                <div class="overflow-hidden relative group aspect-square reveal" style="transition-delay: 0.2s;">
-                    <img src="https://i.ibb.co/WvzkT9Mh/new-c-t.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
-                        <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Valentine</span>
-                    </div>
-                </div>
+    <!-- ================= EVENT DECOR PAGE ================= -->
 
-                <div class="overflow-hidden relative group aspect-[4/3] reveal" style="transition-delay: 0.3s;">
-                    <img src="https://i.ibb.co/N6gVXSZ5/boy-s-day-1.jpg" class="img-zoom w-full h-full object-contain bg-gray-50 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/40 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
-                        <span class="text-white text-[10px] tracking-[0.4em] uppercase border border-white px-6 py-2 backdrop-blur-sm">Boy's Day</span>
-                    </div>
-                </div>
+    <section id="eventDecorPage" class="hidden py-24 bg-[#fff5f7] min-h-screen">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <button id="backHome"
+                    class="mb-10 px-5 py-2 border border-[#2f4f4f] hover:bg-[#2f4f4f] hover:text-white duration-300">
+
+                ← Quay lại
+
+            </button>
+
+            <h2 class="font-serif text-5xl italic text-center mb-16">
+
+                Event Decor
+
+            </h2>
+
+            <div id="eventList"
+                 class="grid md:grid-cols-3 gap-10">
+
             </div>
 
         </div>
-    </div>
-</section>
 
-<style>
-    .img-zoom { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-    .group:hover .img-zoom { transform: scale(1.05); }
-    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-</style>
+    </section>
+
+    <!-- ================= EVENT DETAIL ================= -->
+
+    <section id="eventDetailPage"
+             class="hidden py-24 bg-white min-h-screen">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <button id="backEvent"
+                    class="mb-10 px-5 py-2 border border-[#2f4f4f] hover:bg-[#2f4f4f] hover:text-white duration-300">
+
+                ← Danh sách sự kiện
+
+            </button>
+
+            <h2 id="eventTitle"
+                class="font-serif text-5xl italic text-center mb-14">
+            </h2>
+
+            <div id="eventGallery"
+                 class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= IMAGE VIEW ================= -->
+
+    <div id="imageViewer"
+         class="hidden fixed inset-0 bg-black/90 z-[999] flex justify-center items-center">
+
+        <button id="closeViewer"
+                class="absolute top-8 right-10 text-white text-5xl">
+
+            ×
+
+        </button>
+
+        <img id="viewerImg"
+             class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl">
+
+    </div>
 
     <section id="contact" class="py-32 px-6">
         <div class="max-w-4xl mx-auto text-center reveal">
@@ -321,7 +496,7 @@
                 <div class="w-12 h-[1px] bg-[#2f4f4f] mx-auto opacity-30"></div>
             </div>
             <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                </div>
+            </div>
         </div>
     </div>
 
@@ -972,19 +1147,19 @@
 
             products.forEach((item, index) => {
                 const card = `
-                    <div class="flower-card group bg-white p-4 shadow-sm border border-gray-100">
-                        <div class="overflow-hidden mb-4 h-72 bg-gray-100">
-                            <img src="${item.img}" class="img-zoom w-full h-full object-cover" alt="Product">
-                        </div>
-                        <div class="flex justify-between items-end mb-4">
-                            <div>
-                                <p class="text-[9px] tracking-widest uppercase opacity-60">Price</p>
-                                <p class="font-serif italic text-lg text-[#2f4f4f]">${item.price} VND</p>
+                        <div class="flower-card group bg-white p-4 shadow-sm border border-gray-100">
+                            <div class="overflow-hidden mb-4 h-72 bg-gray-100">
+                                <img src="${item.img}" class="img-zoom w-full h-full object-cover" alt="Product">
                             </div>
-                            
-                        </div>
-                        
-                    </div>`;
+                            <div class="flex justify-between items-end mb-4">
+                                <div>
+                                    <p class="text-[9px] tracking-widest uppercase opacity-60">Price</p>
+                                    <p class="font-serif italic text-lg text-[#2f4f4f]">${item.price} VND</p>
+                                </div>
+
+                            </div>
+
+                        </div>`;
                 productGrid.innerHTML += card;
             });
 
@@ -1002,7 +1177,6 @@
             const form = document.getElementById(`form-${index}`);
             form.classList.toggle('hidden');
         }
-
 
         // 5. Gắn sự kiện Click cho các danh mục (Quan trọng)
         document.querySelectorAll('[data-event]').forEach(button => {
@@ -1046,6 +1220,129 @@
             navLinks.classList.toggle('bg-white');
             navLinks.classList.toggle('p-6');
         });
+
+        /*==========================
+            EVENT DECOR
+        ==========================*/
+
+        const eventDecorData = [
+            {
+                id: "hoang_vy",
+                title: "Hoàng Vỹ",
+                detailTitle: "Happy Birthday Hoàng Vỹ",
+                cover: "https://i.ibb.co/SD44whr5/1.jpg",
+
+                images: [
+                    "https://i.ibb.co/SD44whr5/1.jpg",
+                    "https://i.ibb.co/XrCnLQJC/3.jpg",
+                    "https://i.ibb.co/FbBrWKym/10.jpgg",
+                    "https://i.ibb.co/7tTgGfZK/8.jpg",
+                    "https://i.ibb.co/spsWD13P/2.jpg",
+                    "https://i.ibb.co/kzT1KC0/9.jpg",
+                    "https://i.ibb.co/WWMPYdBt/12.jpg",
+                    "https://i.ibb.co/8nysHLkm/11.jpg",
+                    "https://i.ibb.co/7J6ZqXH5/7.jpg",
+                    "https://i.ibb.co/ccTFdjSK/6.jpg",
+                    "https://i.ibb.co/Y7C9RndL/4.jpg"
+                    
+                ]
+            },
+
+            {
+                id: "tumm_bi",
+                title: "Tumm Bi",
+                detailTitle: "Lễ Đính Hôn",
+                cover: "https://i.ibb.co/4gZ5kB6K/12.jpg",
+                 images: [
+                    "https://i.ibb.co/4gZ5kB6K/12.jpg",
+                ]
+            },         
+        ];
+
+        const homeSections = [
+            document.getElementById("home"),
+            document.getElementById("booking"),
+            document.getElementById("events"),
+            document.getElementById("contact")
+        ];
+
+        const eventDecorPage = document.getElementById("eventDecorPage");
+        const eventDetailPage = document.getElementById("eventDetailPage");
+        const eventList = document.getElementById("eventList");
+        const gallery = document.getElementById("eventGallery");
+        const title = document.getElementById("eventTitle");
+
+        function showHome() {
+            eventDecorPage.classList.add("hidden");
+            eventDetailPage.classList.add("hidden");
+            homeSections.forEach(s => s.classList.remove("hidden"));
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        function showEventList() {
+            homeSections.forEach(s => s.classList.add("hidden"));
+            eventDetailPage.classList.add("hidden");
+            eventDecorPage.classList.remove("hidden");
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        function showEvent(id) {
+            homeSections.forEach(s => s.classList.add("hidden"));
+            eventDecorPage.classList.add("hidden");
+            eventDetailPage.classList.remove("hidden");
+            const event = eventDecorData.find(item => item.id === id);
+            if (!event) return;
+            title.innerHTML = event.detailTitle || event.title;
+            gallery.innerHTML = "";
+            event.images.forEach(img => {
+                gallery.innerHTML += `
+            <div class="gallery-item">
+                <img src="${img}" onclick="openImage('${img}')">
+            </div>
+        `;
+            });
+        }
+
+        function openImage(img) {
+            document.getElementById("imageViewer").classList.remove("hidden");
+            document.getElementById("viewerImg").src = img;
+        }
+
+        document.getElementById("closeViewer").onclick = () => {
+            document.getElementById("imageViewer").classList.add("hidden");
+        };
+
+        document.getElementById("backHome").onclick = showHome;
+        document.getElementById("backEvent").onclick = showEventList;
+
+        eventDecorData.forEach(item => {
+            eventList.innerHTML += `
+            <div class="event-card" onclick="showEvent('${item.id}')">
+                <img src="${item.cover}">
+                <div class="event-name">
+                    ${item.title}
+                </div>
+            </div>
+            `;
+        });
+
+        /*==========================
+        EVENT DECOR CLICK
+        ==========================*/
+        document.querySelectorAll("#events .group").forEach(card => {
+            const text = card.innerText.toLowerCase();
+            if (text.includes("event decor")) {
+                card.style.cursor = "pointer";
+                card.onclick = showEventList;
+            }
+        });
+
     </script>
 </body>
 </html>
