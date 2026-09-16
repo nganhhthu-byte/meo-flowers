@@ -141,8 +141,9 @@
 
     </style>
 </head>
-<body class="overflow-x-hidden">
 
+<body class="overflow-x-hidden">
+    
     <nav class="fixed top-0 w-full z-[100] bg-[#fff5f7]/90 backdrop-blur-md border-b border-gray-100 px-6 py-3 md:px-12 flex justify-between items-center h-20">
         <div class="flex items-center gap-4 h-full">
             <!-- Sử dụng h-24 để logo lớn hẳn lên, và absolute/top-2 để cố định vị trí, không bị cắt bởi rìa thanh nav -->
@@ -576,13 +577,13 @@
                 { price: "450.000", img: "https://i.ibb.co/Jjy8H1q6/V24.jpg" },
                 { price: "300.000", img: "https://i.ibb.co/3yGmj3Hb/new49.jpg " },
                 { price: "450.000", img: "https://i.ibb.co/cKjhbgz6/3.jpg " },
+                { price: "500.000", img: "https://i.ibb.co/4wN01gYC/5.jpg " },
+                { price: "400.000", img: "https://i.ibb.co/mrxfG6Dr/6.jpg " },
+                { price: "800.000", img: "https://i.ibb.co/8nSKr1z0/7.jpg " },
                 { price: "500.000", img: "https://i.ibb.co/hRZk82Kr/new47.jpg " },
                 { price: "300.000 - 350.000 - 400.000 ", img: "https://i.ibb.co/3y0bndmQ/Sophia2.jpg " },
                 { price: "300.000 - 350.000 - 400.000", img: "https://i.ibb.co/jsZJKCs/Sophia.jpg " },
                 { price: "400.000 - 450.000 - 500.000", img: "https://i.ibb.co/G46Zkj8s/Sophia-Cam-Chuong.jpg " },
-                { price: "500.000", img: "https://i.ibb.co/4wN01gYC/5.jpg " },
-                { price: "400.000", img: "https://i.ibb.co/mrxfG6Dr/6.jpg " },
-                { price: "800.000", img: "https://i.ibb.co/8nSKr1z0/7.jpg " },
                 { price: "250.000", img: " " }
             ],
 
@@ -971,7 +972,7 @@
                 { price: "350.000", img: "https://i.ibb.co/N6YHQd73/new12.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/sv3d9gkr/new20.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/TM98D5jF/new22.jpg " },
-                { price: "300.000", img: "https://i.ibb.co/spC1VDF1/new29.jpg " },
+                { price: "350.000", img: "https://i.ibb.co/spC1VDF1/new29.jpg " },
                 { price: "350.000", img: "https://i.ibb.co/FkTxmv4M/new34.jpg " },
                 { price: "300.000", img: "https://i.ibb.co/3Dnd4zP/ocquesaoxanh.jpg " },
                 { price: "300.000", img: "https://i.ibb.co/67MVqBXw/ocquely.jpg " },
@@ -1127,6 +1128,7 @@
                 { price: "800.000", img: "https://i.ibb.co/8nSKr1z0/7.jpg " },
                 { price: "1.000.000", img: "https://i.ibb.co/ZpR4mxkc/8.jpg " },
                 { price: "1.000.000", img: "https://i.ibb.co/whhrwyD1/new33.jpg " },
+                { price: "700.000", img: "https://i.ibb.co/kVKG7Lzy/V1.jpg" },
                 { price: "1.500.000", img: "https://i.ibb.co/0yDTk6vR/Tu-Lip2.jpg" },
                 { price: "850.000", img: "https://i.ibb.co/BVWwCn5h/Ly5.jpg " },
                 { price: "650.000", img: "https://i.ibb.co/JR5BV5y6/H2.jpg " },
@@ -1134,6 +1136,7 @@
                 { price: "650.000", img: "https://i.ibb.co/23NRwrWn/H44.jpg " },
                 { price: "650.000", img: "https://i.ibb.co/HL33ZnNy/H24.jpg " },
                 { price: "650.000", img: "https://i.ibb.co/jvcH8pxm/H52.jpg " },
+                { price: "750.000", img: "https://i.ibb.co/xqPg1H9n/Ly-Xanh.jpg " },
                 { price: "250.000", img: " " }
             ],
 
